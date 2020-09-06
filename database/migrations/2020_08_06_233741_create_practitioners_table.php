@@ -15,6 +15,15 @@ class CreatePractitionersTable extends Migration
     {
         Schema::create('practitioners', function (Blueprint $table) {
             $table->id();
+            $table->string('first_name');
+            $table->string('last_name');
+            $table->id('city_id');
+            $table->id('category_id');
+            $table->id('address_id');
+            $table->string('phone');
+            $table->string('email');
+            $table->string('website');
+            $table->id('clinic_id');
             $table->timestamps();
         });
     }
